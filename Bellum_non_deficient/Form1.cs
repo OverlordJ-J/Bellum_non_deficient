@@ -15,6 +15,8 @@ namespace Bellum_non_deficient
     public partial class Form1 : Form
     {
         CultureInfo Cultura = new CultureInfo("es-ES");
+        int yC = 0;
+        int xC = 0;
         SpeechRecognitionEngine Reconocedor;
         Choices Palabras;
         Grammar Gramatica;
@@ -29,6 +31,9 @@ namespace Bellum_non_deficient
                     Casillas[i , j] = 0;
                 }
             }
+            pictureBox1.Controls.Add(pb_Fog);
+            pb_Fog.Location = new Point(0, 0);
+            pb_Fog.BackColor = Color.Transparent;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -104,7 +109,7 @@ namespace Bellum_non_deficient
             foreach (var elemento in e.Result.Alternates)
             {
                 listBoxReco.Items.Add(elemento.Text + ", Confidencia: " + elemento.Confidence.ToString());
-                if (elemento.Text == "Uno uno equis")
+                if (elemento.Text == "Hola")
                 {
                     if (Casillas[0, 0] == 0)
                         Casillas[0, 0] = 1;
@@ -143,6 +148,38 @@ namespace Bellum_non_deficient
         private void listBoxReco_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pictureBox1.Controls.Add(pb_Fog);
+            pb_Fog.Location = new Point(0, 0);
+            pb_Fog.BackColor = Color.Transparent;
+        }
+
+        private void pb_Fog_Paint(object sender, PaintEventArgs e)
+        {
+            SolidBrush blueBrush = new SolidBrush(Color.Blue);
+            SolidBrush Si = new SolidBrush(Color.Red);
+            SolidBrush Nada = new SolidBrush(Color.Transparent);
+            Rectangle[,] Fog = new Rectangle[5,5];
+            //Llenado de la cuadricula
+            for(int i = 0; i < 5; i++)
+            {
+                for(int j = 0; j < 5; j++)
+                {
+                    Fog[i,j] = new Rectangle(xC + 1, yC + 1, 98, 98);
+                    e.Graphics.FillRectangle(blueBrush, Fog[i,j]);
+                    xC += 100;
+                }
+                yC += 100;
+                xC = 0;
+            }
+            if (Casillas[0, 0] == 1)
+            {
+                MessageBox.Show("Asies");
+                e.Graphics.FillRectangle(Si, Fog[0,4]); 
+            }
         }
 
     }
