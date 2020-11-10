@@ -47,14 +47,18 @@ namespace Bellum_non_deficient
             e.Graphics.DrawLine(Pens.White, 0, 300, 500, 300);
             e.Graphics.DrawLine(Pens.White, 0, 400, 500, 400);
 
-            for(int i=0; i < 5; i++)
+            Pen Hit = new Pen(Color.Red);
+            Pen Fail = new Pen(Color.YellowGreen);
+
+            for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    switch (Casillas[i,j])
+                    #region Casos
+                    switch (Casillas[i, j])
                     {
-
                         case 1:
+                            if (Casillas[i,j] == LargeShip[i,j])
                             Equis(e.Graphics, 0, 0);
                             break;
                         case 2:
@@ -71,19 +75,19 @@ namespace Bellum_non_deficient
                             break;
                         case 6:
                             Equis(e.Graphics, 0, 100);
-                            break;            
-                        case 7:               
+                            break;
+                        case 7:
                             Equis(e.Graphics, 100, 100);
-                            break;            
-                        case 8:               
+                            break;
+                        case 8:
                             Equis(e.Graphics, 200, 100);
-                            break;            
-                        case 9:               
+                            break;
+                        case 9:
                             Equis(e.Graphics, 300, 100);
-                            break;            
-                        case 10:              
+                            break;
+                        case 10:
                             Equis(e.Graphics, 400, 100);
-                            break;            
+                            break;
                         case 11:
                             Equis(e.Graphics, 0, 200);
                             break;
@@ -132,33 +136,16 @@ namespace Bellum_non_deficient
                         default:
                             break;
                     }
-
+                    #endregion
                 }
             }
-            
-            //if (Casillas[0, 0] == 1)
-            //{
-            //    Equis(e.Graphics, 0, 0);
-            //}
-            //if (Casillas[0, 0] == 2)
-            //{
-            //    Cero(e.Graphics, 0, 0);
-            //}
-
-            //if (Casillas[0, 1] == 1)
-            //{
-            //    Equis(e.Graphics, 100, 0);
-            //}
-            //if (Casillas[0, 1] == 2)
-            //{
-            //    Cero(e.Graphics, 100, 0);
-            //}
         }
-        void Equis(Graphics G, int x, int y)
+
+        void Equis(Graphics G, int x, int y, Pen ColorHit)
         {
-            Pen Pluma = new Pen(Color.YellowGreen, 5.0f);
-            G.DrawLine(Pluma, x + 10, y + 10, x + 90, y + 90);
-            G.DrawLine(Pluma, x + 10, y + 90, x + 90, y + 10);
+            //Pen Pluma = new Pen(Color.YellowGreen, 5.0f);
+            G.DrawLine(ColorHit, x + 10, y + 10, x + 90, y + 90);
+            G.DrawLine(ColorHit, x + 10, y + 90, x + 90, y + 10);
         }
 
         void Cero(Graphics G, int x, int y)
@@ -194,6 +181,7 @@ namespace Bellum_non_deficient
 
         private void ReconocimientoVoz(object sender, SpeechRecognizedEventArgs e)
         {
+            #region Comandos
             listBoxReco.Items.Clear();
             foreach (var elemento in e.Result.Alternates)
             {
@@ -201,7 +189,7 @@ namespace Bellum_non_deficient
                 {
                     listBoxReco.Items.Add(elemento.Text + ", Confidencia: " + elemento.Confidence.ToString());
                 }
-                if (elemento.Text == "A uno disparo" || elemento.Text == "a uno disparo")
+                if (elemento.Text == "Hola" || elemento.Text == "a uno disparo")
                 {
                     if (Casillas[0, 0] == 0)
                         Casillas[0, 0] = 1;
@@ -209,7 +197,7 @@ namespace Bellum_non_deficient
                         MessageBox.Show("Intenta en otra casilla");
                     break;
                 }
-                if (elemento.Text == "A dos disparo" || elemento.Text == "a dos disparo")
+                if (elemento.Text == "Uno" || elemento.Text == "a dos disparo")
                 {
                     if (Casillas[0, 1] == 0)
                         Casillas[0, 1] = 2;
@@ -407,7 +395,9 @@ namespace Bellum_non_deficient
                 }
                 //--------------------5
             }
+            //.|. Pal Sejo
             pictureBox1.Invalidate();
+            #endregion
         }
 
         void L_ShipLocation()
@@ -466,8 +456,8 @@ namespace Bellum_non_deficient
                 bool C = false;
                 while (C == false)
                 {
-                    y = rand.Next(1, 5);
-                    x = rand.Next(1, 3);
+                    y = rand.Next(1, 3);
+                    x = rand.Next(1, 5);
                     if (LargeShip[x, y] != 1 && LargeShip[x, y + 1] != 1)
                     {
                         MidShip[x, y] = 1; ;
