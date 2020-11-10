@@ -31,9 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAtaque = new System.Windows.Forms.Button();
             this.listBoxReco = new System.Windows.Forms.ListBox();
-            this.pb_Fog = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Fog)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,26 +60,15 @@
             this.listBoxReco.FormattingEnabled = true;
             this.listBoxReco.Location = new System.Drawing.Point(626, 100);
             this.listBoxReco.Name = "listBoxReco";
-            this.listBoxReco.Size = new System.Drawing.Size(125, 251);
+            this.listBoxReco.Size = new System.Drawing.Size(266, 251);
             this.listBoxReco.TabIndex = 2;
             this.listBoxReco.SelectedIndexChanged += new System.EventHandler(this.listBoxReco_SelectedIndexChanged);
-            // 
-            // pb_Fog
-            // 
-            this.pb_Fog.BackColor = System.Drawing.Color.Maroon;
-            this.pb_Fog.Location = new System.Drawing.Point(12, 12);
-            this.pb_Fog.Name = "pb_Fog";
-            this.pb_Fog.Size = new System.Drawing.Size(500, 500);
-            this.pb_Fog.TabIndex = 3;
-            this.pb_Fog.TabStop = false;
-            this.pb_Fog.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_Fog_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 524);
-            this.Controls.Add(this.pb_Fog);
+            this.ClientSize = new System.Drawing.Size(921, 524);
             this.Controls.Add(this.listBoxReco);
             this.Controls.Add(this.btnAtaque);
             this.Controls.Add(this.pictureBox1);
@@ -89,7 +76,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Fog)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,7 +85,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAtaque;
         private System.Windows.Forms.ListBox listBoxReco;
-        private System.Windows.Forms.PictureBox pb_Fog;
     }
 }
 
