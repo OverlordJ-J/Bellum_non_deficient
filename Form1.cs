@@ -19,8 +19,6 @@ namespace Bellum_non_deficient
         Choices Palabras;
         Grammar Gramatica;
         int[,] Casillas = new int[5, 5];
-        int yC = 0;
-        int xC = 0;
         int[,] LargeShip = new int[5, 5];
         int[,] MidShip = new int[5, 5];
         int[,] SmallShip = new int[5, 5];
@@ -51,7 +49,7 @@ namespace Bellum_non_deficient
             e.Graphics.DrawLine(Pens.White, 0, 400, 500, 400);
 
             Pen Hit = new Pen(Color.Red, 5.0f);
-            Pen Fail = new Pen(Color.YellowGreen, 5.0f);
+            Pen Fail = new Pen(Color.White, 5.0f);
 
             
             for (int i = 0; i < 5; i++)
@@ -814,19 +812,22 @@ namespace Bellum_non_deficient
         void S_ShipLocation()
         {
             Random rand = new Random();
-            int x = rand.Next(0, 5);
-            int y = rand.Next(0, 5);
-            int x2 = rand.Next(3, 4);
-            int y2 = rand.Next(0, 5);
+            int x;
+            int y;
+            int x2;
+            int y2;
             bool C = false;
             while (C == false)
             {
                 y = rand.Next(0, 5);
                 x = rand.Next(0, 5);
-                if (LargeShip[x, y] != 1 && MidShip[x, y] != 1)
+                //x = 0;
+                //y = 0;
+                if (LargeShip[y, x] != 1 || MidShip[y, x] != 1)
                 {
-                    SmallShip[x, y] = 1;
+                    SmallShip[y, x] = 1;
                     C = true;
+                    MessageBox.Show(x + "," + y);
                 }
             }
             bool C2 = false;
@@ -834,9 +835,12 @@ namespace Bellum_non_deficient
             {
                 y2 = rand.Next(0, 5);
                 x2 = rand.Next(3, 4);
-                if (LargeShip[x2, y2] != 1 && MidShip[x2, y2] != 1)
+                //x2 = 0;
+                //y2 = 1;
+                if (LargeShip[y2, x2] != 1 || MidShip[y2, x2] != 1)
                 {
-                    SmallShip[x2, y2] = 1;
+                    SmallShip[y2, x2] = 1;
+                    MessageBox.Show(y2 + "," + x2);
                     C2 = true;
                 }
             }
