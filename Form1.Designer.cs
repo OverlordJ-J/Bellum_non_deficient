@@ -40,20 +40,21 @@
             this.labelAFLOTE = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -117,11 +118,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Impact", 12F);
-            this.label2.Location = new System.Drawing.Point(63, 12);
+            this.label2.Location = new System.Drawing.Point(90, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Golpes a naves";
+            this.label2.Text = "Golpes ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnIniciar
@@ -146,16 +147,16 @@
             this.label3.Font = new System.Drawing.Font("Impact", 12F);
             this.label3.Location = new System.Drawing.Point(63, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 20);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Golpes para ganar";
+            this.label3.Text = "Golpes a naves";
             // 
             // labelDESTRUIDAS
             // 
             this.labelDESTRUIDAS.AutoSize = true;
             this.labelDESTRUIDAS.BackColor = System.Drawing.Color.Transparent;
             this.labelDESTRUIDAS.Font = new System.Drawing.Font("Impact", 12F);
-            this.labelDESTRUIDAS.Location = new System.Drawing.Point(30, 12);
+            this.labelDESTRUIDAS.Location = new System.Drawing.Point(39, 55);
             this.labelDESTRUIDAS.Name = "labelDESTRUIDAS";
             this.labelDESTRUIDAS.Size = new System.Drawing.Size(18, 20);
             this.labelDESTRUIDAS.TabIndex = 8;
@@ -166,7 +167,7 @@
             this.labelAFLOTE.AutoSize = true;
             this.labelAFLOTE.BackColor = System.Drawing.Color.Transparent;
             this.labelAFLOTE.Font = new System.Drawing.Font("Impact", 12F);
-            this.labelAFLOTE.Location = new System.Drawing.Point(30, 55);
+            this.labelAFLOTE.Location = new System.Drawing.Point(30, 12);
             this.labelAFLOTE.Name = "labelAFLOTE";
             this.labelAFLOTE.Size = new System.Drawing.Size(18, 20);
             this.labelAFLOTE.TabIndex = 9;
@@ -176,6 +177,7 @@
             // 
             this.panel1.BackgroundImage = global::Bellum_non_deficient.Properties.Resources.fondo1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.labelAFLOTE);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labelDESTRUIDAS);
@@ -193,6 +195,17 @@
             this.panel2.Size = new System.Drawing.Size(80, 30);
             this.panel2.TabIndex = 11;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Impact", 12F);
+            this.label4.Location = new System.Drawing.Point(26, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "01";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label5);
@@ -200,6 +213,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(80, 30);
             this.panel3.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Impact", 12F);
+            this.label5.Location = new System.Drawing.Point(26, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "02";
             // 
             // panel4
             // 
@@ -209,6 +233,17 @@
             this.panel4.Size = new System.Drawing.Size(80, 30);
             this.panel4.TabIndex = 12;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Impact", 12F);
+            this.label6.Location = new System.Drawing.Point(26, 5);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "03";
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label7);
@@ -217,6 +252,17 @@
             this.panel5.Size = new System.Drawing.Size(80, 30);
             this.panel5.TabIndex = 12;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Impact", 12F);
+            this.label7.Location = new System.Drawing.Point(26, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 20);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "04";
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label8);
@@ -224,6 +270,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(80, 30);
             this.panel6.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Impact", 12F);
+            this.label8.Location = new System.Drawing.Point(26, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 20);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "05";
             // 
             // panel7
             // 
@@ -265,60 +322,16 @@
             this.panel11.Size = new System.Drawing.Size(30, 80);
             this.panel11.TabIndex = 13;
             // 
-            // label4
+            // label9
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Impact", 12F);
-            this.label4.Location = new System.Drawing.Point(26, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "01";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Impact", 12F);
-            this.label5.Location = new System.Drawing.Point(26, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "02";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Impact", 12F);
-            this.label6.Location = new System.Drawing.Point(26, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "03";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Impact", 12F);
-            this.label7.Location = new System.Drawing.Point(26, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "04";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Impact", 12F);
-            this.label8.Location = new System.Drawing.Point(26, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 20);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "05";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Impact", 12F);
+            this.label9.Location = new System.Drawing.Point(54, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "/15";
             // 
             // Form1
             // 
@@ -392,6 +405,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label9;
     }
 }
 
