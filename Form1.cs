@@ -461,7 +461,7 @@ namespace Bellum_non_deficient
             {
                 si = 2;
                 MessageBox.Show("¡Perdio!, La municion se termino, estamos acorralados, fue un placer servir con usted, hasta la otra vida...\n Continuara...");
-
+                Form1.ActiveForm.Close();
             }
             
 
